@@ -3,10 +3,10 @@
 :root {
   --color-body: #b6cbce;
   --color-heading: #eef3db;
-  --color-base: #2d0347;
-  --color-base2: hwb(261 3% 50%);
-  --color-brand: #e0f780;
-  --color-brand2: #deff58;
+  --color-base: rgb(50, 0, 96);
+  --color-base2: #4e008a;
+  --color-brand: #ffe600;
+  --color-brand2: #fbfafa;
   --sidbar-width: 240px;
   --font-base: "Bai Jamjuree";
 }
@@ -55,7 +55,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 
@@ -101,14 +102,14 @@ img {
   .navbar {
     min-height: 100vh;
     width: var(--sidbar-width);
-    background: linear-gradient(hsla(279, 100%, 14%, 0.9), hsla(332, 92%, 15%, 0.9)), url(../images/bg.jpg);
+    background: linear-gradient(hwb(273 0% 0%), hsla(271, 93%, 36%, 0.749)), url(../images/bg2.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+
   }
 
   .navbar-brand img {
-    border: 8px solid var(--color-brand);
+    border: 8px solid var(--color-base2);
   }
 }
 
@@ -167,4 +168,37 @@ img {
 
 .card-custom:hover .card-custom-image img {
   transform: scale(1.1);
+}
+
+/* contacto */
+
+#contact .form-control {
+  color: var(--color-base);
+  border-color: var(--color-base);
+  color: var(--color-body);
+}
+
+#contact .form-control:focus {
+  border-color: var(--color-base);
+  box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+  color: var(--color-body);
+}
+
+#contact input.form-control {
+  height: 44px;
+}
+
+/* Social links*/
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-base);
+  border-radius: 100px;
+  font-size: 24px;
 }
